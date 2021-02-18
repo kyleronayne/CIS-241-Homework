@@ -107,6 +107,30 @@ head -n 3 ronayne.txt
 ```
 tail -n 100 TheWhale.txt
 ```
+**wc** -  Displays, in order, the number of lines, word count, and byte and character count of a file.
+```
+wc Glossary.md
+```
+**sort** - Sorts a file’s records by the option specified in the command. The default option is by line alphabetical order. sort <option> <file name>.
+```
+cat income-statemetns.txt | sort -n
+```
+**uniq** - Reports or filters out the repeated lines in a file. The uniq command should be piped after the sort command, because uniq is not able to detect duplicate lines unless they are adjacent.
+```
+cat Glossary.md | uniq
+```
+**wget** - Downloads files from the specified url.
+```
+wget https://www.gutenberg.org/ebooks/1497
+```
+**curl** - Allows the user to exchange requests and responses with the serve behind the specified url.
+```
+curl -A "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0" https://www.gvsu.edu
+```
+**uname** - Displays the information about the system.
+```
+uname
+```
 
 
 
