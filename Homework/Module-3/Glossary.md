@@ -54,35 +54,32 @@ rm ronayne.txt
 ```
 rm -d Classwork
 ```
-**cp** - Copies an existing file.
+**cp** - Copies an existing file. cp <existing file name> <new file name>.
 ```
-cp <existing file name> <new file name>
-cp Homework.txt  StuffIDontLikeToDo.txt
+cp Homework.txt StuffIDontLikeToDo.txt
 ```
-**cp -R** - Copies an existing directory.
+**cp -R** - Copies an existing directory. cp <exiting directory name> <new file name>.
 ```
-cp <exiting directory name> <new file name>
 cp Desktop DesktopCopy
 ```
-**mv** - Moves a file to specifed directory.
+**mv** - Moves a file to specifed directory. mv <file name> <destination directory>
 ```
-mv <file name> <destination directory>
 mv Module-3-Assignment.txt Homework
 ```
-**chown** - Changes the ownership of a file.
+**chown** - Changes the ownership of a file. chown <user> <file name> or chown <user:group> <file name>
 ```
-chown <user> <file name> or chown <user:group> <file name>
 chown woodriir ronayne.txt
 chown woodriir:CIS_241_Students Assignments-To-Do.txt
 ```  
-**cat <file name> | tr** - Translates text.
+**tr** - Translates text. cat <file name> | tr
 ```
 cat TheWhale.txt | tr
 ``` 
-**cat <file name> | sort**
+**sort** - Sorts words in the specified file. cat  <file name> | sort
+```
 cat TheWhale.txt | sort
 ```
-**chmod <ugoa><+-><rwx> <file name>** - Changes the permissions for a file. Component #1 specifies who you are changing permissions for (e.g. user owner, others, or all three. Component #2 specifies how you want change the permissions (e.g. add or delete). Component #3 specifies which permission you want to change (e.g. read, write, or execute).
+**chmod** - Changes the permissions for a file. chmod <ugoa><+-><rwx> <file name>. Component #1 specifies who you are changing permissions for (e.g. user owner, others, or all three. Component #2 specifies how you want change the permissions (e.g. add or delete). Component #3 specifies which permission you want to change (e.g. read, write, or execute).
 ```
 chmod ugo+r foo
 ```
