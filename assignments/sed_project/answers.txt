@@ -1,5 +1,5 @@
 1.)
-sed -E 's/color/colour/g; s/honor/honour/g; s/behavior/behaviour/g; s/humor/humour/g' /usr/share/dict/american-english >> new_dict
+sed -E 's/color/colour/g; s/honor/honour/g; s/behavior/behaviour/g; s/humor/humour/g' /usr/share/dict/american-english > new_dict
 
 2.)
 sed 's/FOOPS/if/g' /home/woodriir/241/prog.c | sed 's/BEEPBOOP/\/\*\*/g' > MyFile.c
@@ -14,4 +14,7 @@ sed -n 's/#\s*define\s//p' /usr/include/limits.h > clean_limits.h
 sed -i.ORIG 's/gattaca/@@GREAT MOVIE@@/g' dna.txt
 
 6.)
+sed -f ascii.sed /home/woodriir/241/file > decoded
+
+7.)
 
