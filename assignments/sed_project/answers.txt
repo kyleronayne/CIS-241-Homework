@@ -11,4 +11,7 @@ sed -E '/<script.*>.*<\/script>/d; /<script/,/<\/script>/d' faculty > faculty.in
 sed -n 's/#\s*define\s//p' /usr/include/limits.h > clean_limits.h
 
 5.)
+sed -i.ORIG 's/gattaca/@@GREAT MOVIE@@/g' dna.txt
+
+6.)
 
