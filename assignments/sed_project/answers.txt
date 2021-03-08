@@ -17,4 +17,4 @@ sed -i.ORIG 's/gattaca/@@GREAT MOVIE@@/g' dna.txt
 sed -f ascii.sed /home/woodriir/241/file > decoded
 
 7.)
-
+tac /home/woodriir/241/lyrics | sed -n '1,28p' > ending_lyrics
