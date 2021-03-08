@@ -1,0 +1,8 @@
+1.)
+sed -E 's/color/colour/g; s/honor/honour/g; s/behavior/behaviour/g; s/humor/humour/g' /usr/share/dict/american-english >> new_dict
+
+2.)
+sed -iE 's/FOOPS/if/g; s/BEEPBOOP/\/\*\*/g' MyFile.c
+
+3.)
+sed 's/FOOPS/if/g' /home/woodriir/241/prog.c | sed 's/BEEPBOOP/\/\*\*/g' > MyFile.c
