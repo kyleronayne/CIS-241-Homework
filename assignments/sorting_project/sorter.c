@@ -13,7 +13,7 @@ void quicksort(char** contents, int left, int right) {
 	if (left >= right) return;
 	
 	srand(1);
-	pivotIndex = (rand() % (right - left)) + left;
+	int pivotIndex = (rand() % (right - left)) + left;
 	char* pivot = contents[pivotIndex];
 
 	swap(&contents[pivotIndex], &contents[right]);
@@ -48,7 +48,7 @@ void sort(char** contents, int size) {
 	int numBytes = 0;
 
 	int tempMaxWordLength = 0;
-	for (int i = 0; i < r; i++) {
+	for (int i = 0; i < numWords; i++) {
 		while ((*contents)[numBytes++] != '\n') {
 			tempMaxWordLength++;
 			if (tempMaxWordLength > maxWordLength) {
@@ -67,9 +67,9 @@ void sort(char** contents, int size) {
 	int a = 0;
 	int b = 0;
 	for (int i = 0; i < numBytes; i++) {
-		if((*contents)[i] == "\n") {
+		if((*contents)[i] == '\n') {
 			// set to null character
-			list[a][b] = "\0";
+			list[a][b] = '\0';
 			a++;
 			b = 0;
 		} else {
@@ -93,13 +93,3 @@ void sort(char** contents, int size) {
 	free(list);
 	free(sortedContents);
 }
-
-
-
-
-
-
-
-
-
-
