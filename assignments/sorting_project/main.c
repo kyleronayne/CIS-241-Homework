@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	char* sortedFileName = argv[2];
 
 	char* contents;
-	size_t fileSize = load_file(unsortedFileName, &contents);
+	size_t fileSize = fopen(unsortedFileName, "r");
 
 	int numWords = 0;
 	for (int i = 0; i < fileSize; i++) {
@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
 	
 	sort(&contents, numWords);
 
-	save_file(sortedFileName, contents, fileSize);
+	fprintf(sortedFileName, contents, fileSize);
 	free(contents);
 	return 0;
 }
