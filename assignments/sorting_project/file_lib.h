@@ -3,6 +3,6 @@
 #include <stdlib.h>
 
 size_t load_file(char* path, char** contents);
-size_t save_file(char* path, char* contents, size_t size);
+size_t save_file(char* path, char* contents, size_t fileSize);
 
 #endif
