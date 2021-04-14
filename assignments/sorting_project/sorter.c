@@ -13,7 +13,7 @@ void quicksort(char** contents, int left, int right) {
 	if (left >= right) return;
 	
 	srand(1);
-	int pivotIndex = (rand() % (right - left)) + left;
+	int pivotIndex = (rand()%(right - left)) + left;
 	char* pivot = contents[pivotIndex];
 
 	swap(&contents[pivotIndex], &contents[right]);
@@ -21,11 +21,11 @@ void quicksort(char** contents, int left, int right) {
 	int l = left;
 	int r = right - 1;
 	while (1) {
-		while (strcmp(contents[l], pivot) < 0) {
+		while (strcasecmp(contents[l], pivot) < 0) {
 			l++;
 		}
 
-		while (r >= left && strcmp(pivot, contents[r]) < 0) {
+		while (r >= left && strcasecmp(pivot, contents[r]) < 0) {
 			r--;
 		}
 
