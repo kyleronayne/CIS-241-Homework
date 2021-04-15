@@ -18,6 +18,7 @@ Swaps the memory location for two strings. Helper function for the
 quicksort function.
 @param char** a: Pointer to the first string in the array
 @param char** b: Potiner to the second string in the array
+@return: None
 ***********************************************************************/
 void swap(char** a, char** b) {
 	char* temp = *a;
@@ -32,6 +33,7 @@ of an unsorted array.
 @param char** contents: The unsorted array of strings
 @param int left: The index to start sorting the contents array
 @param int right: The index to stop sorting the contents array
+@return None
 ***********************************************************************/
 void quicksort(char** contents, int left, int right) {
 
