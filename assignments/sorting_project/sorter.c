@@ -2,21 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/**********************************************************************
- * Program that reads an un-sorted file's contents, sorts the contents
- * using the quicksort algorithm, and writes the contents to a new
- * file.
- * @author Kyle Ronayne
- * @version Winter 2021
- *********************************************************************/
 
 
-/**********************************************************************
- * Swaps the memory location for two strings. Helper function for the
- * quicksort function.
- * @param char** a: Pointer to the first string in the array
- * @param char** b: Potiner to the second string in the array
- *********************************************************************/
+/***********************************************************************
+C program that reads a given file and uses the quicksort alogrithm
+to sort the file's contents and output it to an new file.
+
+@author Kyle Ronayne
+@version Winter 2021
+***********************************************************************/
+
+
+/***********************************************************************
+Swaps the memory location for two strings. Helper function for the
+quicksort function.
+@param char** a: Pointer to the first string in the array
+@param char** b: Potiner to the second string in the array
+***********************************************************************/
 void swap(char** a, char** b) {
 	char* temp = *a;
 	*a = *b;
@@ -24,17 +26,27 @@ void swap(char** a, char** b) {
 }
 
 
-
-
+/***********************************************************************
+A funtion that implements the quicksort algorithm to sort the contents
+of an unsorted array.
+@param char** contents: The unsorted array of strings
+@param int left: The index to start sorting the contents array
+@param int right: The index to stop sorting the contents array
+***********************************************************************/
 void quicksort(char** contents, int left, int right) {
+
+	// Recursive base case
 	if (left >= right) return;
 	
-	srand(1);
-	int pivotIndex = (rand()%(right - left)) + left;
+	// Generated a random pivot index to define the pivot point
+	int pivotIndex = srand(1); (rand()%(right - left)) + left;
+
+	// The pivot used for partitioning contents
 	char* pivot = contents[pivotIndex];
 
 	swap(&contents[pivotIndex], &contents[right]);
 
+	// Paritioning
 	int l = left;
 	int r = right - 1;
 	while (1) {
@@ -42,7 +54,8 @@ void quicksort(char** contents, int left, int right) {
 			l++;
 		}
 
-		while (r >= left && strcasecmp(pivot, contents[r]) < 0) {
+		while (r >= left && strcasecmp(pivot, contents[r]) < 0)
+	       	{
 			r--;
 		}
 
@@ -53,6 +66,8 @@ void quicksort(char** contents, int left, int right) {
 		swap(&contents[l], &contents[r]);
 	}
 	pivotIndex = l;
+
+	// Swapping strings based on appropraite pivot
 	swap(&contents[pivotIndex], &contents[right]);
 
 	quicksort(contents, left, pivotIndex - 1);
