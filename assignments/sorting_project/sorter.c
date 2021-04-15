@@ -40,7 +40,8 @@ void quicksort(char** contents, int left, int right) {
 	if (left >= right) return;
 	
 	// Generated a random pivot index to define the pivot point
-	int pivotIndex = srand(1); (rand()%(right - left)) + left;
+	srand(1);
+	int pivotIndex = (rand()%(right - left)) + left;
 
 	// The pivot used for partitioning contents
 	char* pivot = contents[pivotIndex];
