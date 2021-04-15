@@ -5,8 +5,7 @@
 
 
 /***********************************************************************
-C program that reads a given file and uses the quicksort alogrithm
-to sort the file's contents and output it to an new file.
+Functions emulating the quicksort alogrithm to sort a file's contents.
 
 @author Kyle Ronayne
 @version Winter 2021
