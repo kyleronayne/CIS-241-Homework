@@ -1,4 +1,4 @@
-#C Sorting Program
+# C Sorting Program
 
-##Usage:
+## Usage:
  ./a.out *UNSORTED_INPUT_FILE* *SORTED_OUTPUT_FILE*
