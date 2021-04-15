@@ -2,12 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/**********************************************************************
+ * Program that reads an un-sorted file's contents, sorts the contents
+ * using the quicksort algorithm, and writes the contents to a new
+ * file.
+ * @author Kyle Ronayne
+ * @version Winter 2021
+ *********************************************************************/
 
+
+/**********************************************************************
+ * Swaps the memory location for two strings. Helper function for the
+ * quicksort function.
+ * @param char** a: Pointer to the first string in the array
+ * @param char** b: Potiner to the second string in the array
+ *********************************************************************/
 void swap(char** a, char** b) {
 	char* temp = *a;
 	*a = *b;
 	*b = temp;
 }
+
+
+
 
 void quicksort(char** contents, int left, int right) {
 	if (left >= right) return;

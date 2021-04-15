@@ -1,0 +1,18 @@
+Timestamps Set 1:
+
+-rwxr-xr-x 1 ronaynek users 16560 Mar 17 13:51 a.out
+-rw-r--r-- 1 ronaynek users   157 Mar 17 13:35 circleLib.c
+-rw-r--r-- 1 ronaynek users    65 Mar 17 13:23 circleLib.h
+-rw-r--r-- 1 ronaynek users  1472 Mar 17 13:35 circleLib.o
+-rw-r--r-- 1 ronaynek users   230 Mar 17 13:49 main.c
+-rw-r--r-- 1 ronaynek users  1472 Mar 17 13:49 main.o
+
+
+Timestamps Set 2:
+
+-rwxr-xr-x 1 ronaynek users 16584 Mar 17 14:21 a.out
+-rw-r--r-- 1 ronaynek users   172 Mar 17 14:21 circleLib.c
+-rw-r--r-- 1 ronaynek users    82 Mar 17 14:16 circleLib.h
+-rw-r--r-- 1 ronaynek users  1480 Mar 17 14:21 circleLib.o
+-rw-r--r-- 1 ronaynek users   230 Mar 17 13:49 main.c
+-rw-r--r-- 1 ronaynek users  1472 Mar 17 13:49 main.o
