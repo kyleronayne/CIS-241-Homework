@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <cstring>
+#include <math.h>
 
 /**
  * Example for demonstration at start of test.
@@ -140,7 +141,11 @@ void seven(Student** students) {
  *
  * -b + sqrt(b^2 - 4ac) / (2a)
  */
-double quadratic(double a, double b, double c){
+double quadratic(double a, double b, double c) {
+	double part1 = -b + sqrt(-b*-b - 4*a*c);
+	double part2 = 2*a;
+
+	return part1 / part2;
 }
 
 /**
