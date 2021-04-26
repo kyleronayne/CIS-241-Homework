@@ -161,5 +161,11 @@ double quadratic(double a, double b, double c) {
  * If you are writing more than five lines you are doing it wrong.
  */
 #include <stdio.h>
-void capitalize(char* str, size_t len){
+void capitalize(char* str, size_t len) {
+	for (int i = 0; i < len; i++) {
+		int charAsInt = (int) str[i];
+		if (charAsInt >= 97 && charAsInt <= 122) {
+			str[i] = (char) charAsInt - 32;
+		}
+	}
 }
