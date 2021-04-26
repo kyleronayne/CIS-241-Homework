@@ -69,6 +69,13 @@ void three(Student a, Student* b) {
  */
 Student four(){
 	Student a;
+
+	strcpy((char*) a.first_name, "T. Yoshisaur");
+	strcpy((char*) a.last_name, "Munchakoopas");
+	a.g_number = 1990;
+	a.gpa = 3.1;
+	a.roommate = &Mario;
+
 	return a;
 }
 
