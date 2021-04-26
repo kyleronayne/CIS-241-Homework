@@ -87,8 +87,14 @@ Student four(){
  * 3.54    (gpa [we know he's the smart one])
  * Remember: C is pass by copy ONLY.
  */
-Student* five(){
-	return NULL;
+Student* five() {
+	Student* student;
+	student->first_name = "Luigi";
+	student->last_name = "Mario";
+	student->g_number = 2;
+	student->gpa = 3.54;
+	student->roommate = NULL;
+	return student;
 }
 
 /**
