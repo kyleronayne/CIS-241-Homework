@@ -3,7 +3,6 @@
 #include "student.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <cstring>
 
 /**
  * Example for demonstration at start of test.
@@ -27,22 +26,20 @@ void easyPeasy(int* x){
  * Set the g number to 10, the gpa to 1.16.
  */
 void one(Student* a) {
-	a->first_name = "Jigglypuff";
-	a->last_name = "Ketchum";
-	a->g_number = 10;
-	a->gpa =  1.16;
+	char firstName[11] = "Jigglypuff";
+	char lastName[8] = "Ketchum";
+
+	set_first_name(a, firstName);
+	set_last_name(a, lastName);
+	set_g_number(a, 10);
+	set_gpa(a, 1.16);
 }
 
 /**
  * Copy the information from Student b to Student a.
  * (pointer parameters).
  */
-void two(Student* a, Student* b) {
-	set_first_name(a, (char*) get_first_name(b));
-	set_last_name(a, (char*) get_last_name(b));
-	set_g_number(a, (int) get_g_number(b));
-	set_gpa(a, (float) get_gpa(b));
-	set_roommate(a, get_roommate(b));
+void two(Student* a, Student* b){
 }
 
 /**
@@ -50,12 +47,7 @@ void two(Student* a, Student* b) {
  * (mixed variable type parameters).
  */
 
-void three(Student a, Student* b) {
-	b->first_name = a.first_name;
-	b->last_name = a.last_name;
-	b->g_number = a.g_number;
-	b->gpa = a.gpa;
-	b->roommate = a.roommate;
+void three(Student a, Student* b){
 }
 
 /**
