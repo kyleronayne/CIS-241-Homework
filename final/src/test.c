@@ -129,7 +129,9 @@ Student* six() {
  * 3.54    (gpa [we know he's the smart one])
  */
 void seven(Student** students) {
-	
+	*students = (Student*)malloc(sizeof(Student) * 10);
+	Student* student = five();
+	students[0][9] = *student;
 }
 
 /**
