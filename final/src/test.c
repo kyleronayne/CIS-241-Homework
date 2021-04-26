@@ -70,8 +70,8 @@ void three(Student a, Student* b) {
 Student four(){
 	Student a;
 
-	strcpy((char*) a.first_name, "T. Yoshisaur");
-	strcpy((char*) a.last_name, "Munchakoopas");
+	a.first_name = "T. Yoshisaur";
+	a.last_name = "Munchakoopas";
 	a.g_number = 1990;
 	a.gpa = 3.1;
 	a.roommate = &Mario;
@@ -88,12 +88,14 @@ Student four(){
  * Remember: C is pass by copy ONLY.
  */
 Student* five() {
-	Student* student;
+	Student* student = (Student*)malloc(sizeof(Student));
+
 	student->first_name = "Luigi";
 	student->last_name = "Mario";
 	student->g_number = 2;
 	student->gpa = 3.54;
 	student->roommate = NULL;
+
 	return student;
 }
 
@@ -107,8 +109,11 @@ Student* five() {
  * 2       ( :( )
  * 3.54    (gpa [we know he's the smart one])
  */
-Student* six(){
-	return NULL;
+Student* six() {
+	Student* students = (Student*)malloc(sizeof(Student) * 10);
+	students[3] = *five();
+
+	return students;
 }
 
 /**
@@ -123,7 +128,7 @@ Student* six(){
  * 2       ( :( )
  * 3.54    (gpa [we know he's the smart one])
  */
-void seven(Student** students){
+void seven(Student** students) {
 	
 }
 
